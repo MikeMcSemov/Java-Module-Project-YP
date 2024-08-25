@@ -11,7 +11,7 @@ int distance = 0;
 //определение метода победителя гонки
 static void race(Car[] carArray) {
     System.out.println(carArray[0].nameCar);
-
+//
     }
         //if () {
 

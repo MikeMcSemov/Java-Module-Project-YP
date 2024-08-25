@@ -35,7 +35,7 @@ public class Main {
         scanner.close();
 
         //экземпляре класса «Гонка». Определение победителя
-
+        //
 
         //System.out.println(carArray[0].nameCar);
         //Race.race(Car[0] Arraylist);
