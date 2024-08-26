@@ -1,26 +1,30 @@
 public class Race {
 
-String leader = "";
-int distance = 0;
+    public static String race(Car[] carArray) {
 
-    Race(String leader, int distance) {
-        this.leader = leader;
-        this.distance = distance;
+        int[] distance = new int[3];
+        String leader = "";
+
+        for(int i = 0 ; i < 3; i++) {
+            distance[i] = 24 * carArray[i].speedCar;
+        }
+
+        int max = -1;
+        int count = 0;
+
+        for (int i=0; i < carArray.length; i++) {
+            if (carArray[i].speedCar > max) {
+                max = carArray[i].speedCar;
+                leader = carArray[i].nameCar;
+                count = count + 1;
+            }
+
+
+
+           //else if (carArray[i].speedCar == max){
+           //  System.out.println("В этой гонке победителя нет, попробуйте запустить программу снова!");
+           //}
+        }
+        return leader;
     }
-
-//определение метода победителя гонки
-static void race(Car[] carArray) {
-    System.out.println(carArray[0].nameCar);
-//
-    }
-        //if () {
-
-//является ли лидером новый автомобиль, введённый пользователем. Для этого сравним дистанцию текущего лидера с дистанцией, которую проехал автомобиль, введённый пользователем.
-    //} else
-    //{
-//
-   // }
-//Дистанция = время (24) * скорость (вводит пользователь)
-//}
-
 }
