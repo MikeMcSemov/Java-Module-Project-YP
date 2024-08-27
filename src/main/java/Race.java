@@ -10,21 +10,27 @@ public class Race {
         }
 
         int max = -1;
-        int count = 0;
-
         for (int i=0; i < carArray.length; i++) {
             if (carArray[i].speedCar > max) {
                 max = carArray[i].speedCar;
                 leader = carArray[i].nameCar;
+            }
+        }
+
+        int count = 0;
+        for (int i=0; i < carArray.length; i++) {
+            if (carArray[i].speedCar == max) {
                 count = count + 1;
             }
-
-
-
-           //else if (carArray[i].speedCar == max){
-           //  System.out.println("В этой гонке победителя нет, попробуйте запустить программу снова!");
-           //}
         }
+
+        if (count > 1) {
+            System.out.println("В этой гонке победителя нет, попробуйте запустить программу снова!");
+        }
+        else {
+            System.out.println("Самая быстрая машина: " + leader);
+        }
+
         return leader;
     }
 }

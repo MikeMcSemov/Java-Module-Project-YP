@@ -26,15 +26,10 @@ public class Main {
                 }
             }
             isCorrect = false;
-
             Car car = new Car(name, speed);
             carArray[i] = car;
         }
-
         scanner.close();
-
         Race.race(carArray);
-        String winner = Race.race(carArray);
-        System.out.println("Самая быстрая машина: " + winner);
     }
 }
