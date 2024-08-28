@@ -15,7 +15,7 @@ public class Main {
                 System.out.println("Введите скорость машины №" + (i + 1));
                 if (scanner.hasNextInt()) {
                     speed = scanner.nextInt();
-                    if (speed < 0 || speed > 250) {
+                    if (speed <= 0 || speed >= 250) {
                         System.out.println("Неправильная скорость");
                     } else {
                         isCorrect = true;
